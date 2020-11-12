@@ -36,7 +36,7 @@ Each data file is then picked for a machine learning task by a separate Apache S
 Apache Hive. After the training is done a trained machine learning model is stored back to the data
 lake analytics zone.</p>
 
-<img src="flowchart.png">
+<img src="flow.png">
 
 <p>The trained models are used by a python task and the predictions are served to the external clients as <br>
 REST service with help of flask.</p>
