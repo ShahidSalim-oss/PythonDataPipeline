@@ -32,7 +32,7 @@ separated in a later stage.</p>
 <p>When the raw data is made available it is pushed to kafka from where it is picked by Apache
 Spark periodically. At any time Kafka may also receive similar data from partner systems. After some cleaning job the data is divided into groups according to its source and other criteria. Each data group is then stored back to the data lake staging zone in parquet format. Each data file is then picked for a machine learning task by a separate Apache Spark process. This Spark ML instance also provides a gateway to BI tools like Tableau to connect to the cleaned data for analysis purposes. After the training is done a trained machine learning model is stored back to the data lake in Pickle format.</p>
 
-<img src="flow.png">
+<img src="flowchart.png">
 
 <p>The trained models are used by a python task and the predictions are served to the external clients as REST service with help of flask. A Springboot based call interceptor would be used to facilitate some additional jobs like login authentication.</p>
 <p>In order to improve the accuracy of the system, this complete system is to be executed on scheduled
