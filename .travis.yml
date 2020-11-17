@@ -2,7 +2,7 @@ language: java
 jdk:
   - openjdk8
 
-script: ./mvnw clean install
+script: ./mvn clean install
 
 notifications:
   email: salim.shahid@edu.dsti.institute
